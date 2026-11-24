@@ -36,7 +36,7 @@ async def root():
         "message":  "Your at the Xander's Backend"
     }
 
-# app.middleware("http")(api_authenticate_key)
+app.middleware("http")(api_authenticate_key)
 app.include_router(
     ai_agent_router,
     tags=["AI Module"]
